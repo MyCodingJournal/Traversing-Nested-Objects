@@ -94,20 +94,29 @@ letters[1][1][1][1][0];
 
 //Practice--------------------------------------------------------
 
-const array = ['a',['b',['c', ['d']]]];
-
-array[0];
+array[0];// 1st element
 //=> a
 
-array[1];
-//=> [ 'b', [ 'c', [ 'd' ] ] ]
+array[1];// second element
+//=> [ 'b', [ 'c', [ 'd', [Array] ] ] ]
 
 array[1][0];
 //=> b
+//first element of the above returned value [ 'b', [ 'c', [ 'd', [Array] ] ] ]
 
 array[1][1];
-//=> [ 'c', [ 'd' ] ]
+//=> [ 'c', [ 'd', [ 'e' ] ] ]
+// second element of [ 'b', [ 'c', [ 'd', [Array] ] ] ]
 
 array[1][1][1];
-//=> [ 'd' ]
+//=> [ 'd', [ 'e' ] ]
+// second element of [ 'c', [ 'd', [ 'e' ] ] ]
+
+array[1][1][1][1];
+//=> [ 'e' ]
+// second element of  [ 'd', [ 'e' ] ]
+
+array[1][1][1][1][0];
+// => e
+// first element of [ 'e' ]
 
